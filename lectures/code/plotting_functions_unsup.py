@@ -37,13 +37,13 @@ from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 # Adapted from the mglearn package
 # https://github.com/amueller/mglearn/blob/106cf48ef03710ef1402813997746741aa6467da/mglearn/plot_helpers.py#L27
 
-data = np.random.rand(4, 4)
-fig, (ax1, ax2) = plt.subplots(2)
-ax1.imshow(data)
-ax1.set_title("Default colormap")
-plt.rc('image', cmap='viridis')
-ax2.imshow(data)
-ax2.set_title("Set default colormap")
+# data = np.random.rand(4, 4)
+# fig, (ax1, ax2) = plt.subplots(2)
+# ax1.imshow(data)
+# ax1.set_title("Default colormap")
+# plt.rc('image', cmap='viridis')
+# ax2.imshow(data)
+# ax2.set_title("Set default colormap")
 colors = ['xkcd:azure', 'yellowgreen', 'tomato', 'teal', 'indigo', 'aqua', 'orangered', 'orchid', 'black', 'xkcd:turquoise', 'xkcd:violet', 'aquamarine', 'chocolate', 'darkgreen', 'sienna', 'pink', 'lightblue', 'yellow', 'lavender', 'wheat', 'linen']
 
 ####################################
@@ -1318,7 +1318,7 @@ def plot_dbscan_with_labels(X, fig, eps=1.0, min_samples = 2, font_size=14):
         n_clusters = len(set(model.labels_)) - 1 
     else: 
         n_clusters = len(set(model.labels_))
-    plt.title('Number of clusters: %d'%(n_clusters))
+    plt.title('Esp: %d, min samples: %d, Number of clusters: %d'%(eps, min_samples, n_clusters))
     db_colors = ['xkcd:azure', 'yellowgreen', 'tomato', 'teal', 'orangered', 'orchid', 'black', 'xkcd:turquoise' , 'wheat']    
     # colours = []
     # for i in range(n_clusters + 1):
